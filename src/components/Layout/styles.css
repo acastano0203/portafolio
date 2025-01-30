@@ -1,0 +1,7 @@
+.circular-gradient {
+  background: linear-gradient(
+    50deg,
+    rgba(255, 255, 255, 1) 55%,
+    rgba(73, 19, 180, 0.8) 100%
+  );
+}
