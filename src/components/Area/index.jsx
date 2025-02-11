@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { DiJavascript } from "react-icons/di";
+import "./styles.css";
 import {
   FaBriefcase,
   FaWordpress,
@@ -38,59 +39,63 @@ const Area = () => {
   const [activeTab, setActiveTab] = useState("skills");
 
   return (
-    <div className="container mx-auto my-20 px-4" id="experience">
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        <div className="about-me-section w-full md:w-3/4 ">
-          <h2 className="text-[200%] text-black font-bold mb-4 flex items-center gap-2">
-            <FaBriefcase className="text-[#5e17eb]" />
+    <div className="container mx-auto my-20 px-10" id="experience">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="about-me-section w-full md:w-3/4 text-justify">
+          <h2 className="text-[100%] md:text-[150%] lg:text-[200%] text-black font-bold mb-12 flex items-center gap-4 animate-shimmer font-poppins">
+            <FaBriefcase className="text-[#5e17eb] text-[100%] md:text-[150%] lg:text-[200%]" />
             Mi Experiencia
           </h2>
 
-          <span className="font-poppins text-[#000080] text-justify leading-relaxed tracking-wide text-[100%]">
-            Soy un desarrollador frontend especializado en crear interfaces
-            intuitivas, rápidas y optimizadas para mejorar la experiencia del
-            usuario y maximizar conversiones.
+          <span className="font-poppins text-[#000080] text-justify leading-relaxed tracking-wide text-[100%] ">
+            ¿Qué hace que una experiencia digital realmente conecte con su
+            audiencia? No se trata solo de una interfaz atractiva, sino de la
+            combinación perfecta entre diseño, funcionalidad y estrategia.
             <br />
             <br />
-            Trabajo con ReactJS, TypeScript, Astro, TailwindCSS y JavaScript,
-            además de herramientas como Redux, Strapi y Azure DevOps.
+            Como desarrollador frontend y consultor web, me especializo en crear
+            soluciones digitales que no solo optimizan la experiencia del
+            usuario, sino que también potencian la visibilidad y el alcance de
+            los proyectos. He trabajado con React y TypeScript para construir
+            interfaces escalables y eficientes, utilizando Tailwind CSS para un
+            diseño ágil y adaptable. Además, integro Redux y Axios para
+            gestionar datos y mejorar el rendimiento en la comunicación con
+            APIs.
             <br />
             <br />
-            Me enfoco en UX/UI, optimización de rendimiento y estrategias de
-            tráfico digital, combinando SEO, analítica y diseño estratégico para
-            aumentar la visibilidad y conversión.
+            Pero una plataforma bien desarrollada no es suficiente si no llega a
+            las personas adecuadas. Es por eso que también he explorado
+            estrategias de tráfico digital en Meta, asegurando que los productos
+            y servicios tengan la exposición correcta para atraer y convertir a
+            la audiencia ideal.
             <br />
             <br />
-            También integro APIs, servicios en la nube (AWS, Azure) y
-            metodologías ágiles como Scrum para garantizar soluciones escalables
-            y eficientes.
+            Mi enfoque combina tecnología y estrategia para transformar ideas en
+            experiencias digitales impactantes y efectivas.
             <br />
             <br />
-            Si buscas mejorar tu plataforma digital, te ayudo a transformar
-            ideas en experiencias atractivas y efectivas que potencien tu
-            negocio.
           </span>
         </div>
 
         <div>
           <div className="flex border-b border-gray-200">
             <button
-              className={`py-2 px-4 ${
+              className={`py-2 px-4 font-poppins ${
                 activeTab === "skills"
-                  ? "border-b-2 border-blue-500 text-blue-500"
-                  : "text-gray-500 hover:text-gray-700"
-              }`}
+                  ? "border-b-2 border-blue-500 text-black font-bold text-[100%] md:text-[150%] lg:text-[150%]"
+                  : "text-gray-500 hover:text-gray-700 text-[100%] md:text-[150%] lg:text-[150%]"
+              } animate-shimmer`}
               onClick={() => setActiveTab("skills")}
             >
               Habilidades
             </button>
 
             <button
-              className={`py-2 px-4 ${
+              className={`py-2 px-4 font-poppins ${
                 activeTab === "education"
-                  ? "border-b-2 border-blue-500 text-blue-500"
-                  : "text-gray-500 hover:text-gray-700"
-              }`}
+                  ? "border-b-2 border-blue-500 text-black font-bold text-[100%] md:text-[150%] lg:text-[150%]"
+                  : "text-gray-500 hover:text-gray-700 text-[100%] md:text-[150%] lg:text-[150%]"
+              } animate-shimmer`}
               onClick={() => setActiveTab("education")}
             >
               Educación
@@ -100,140 +105,186 @@ const Area = () => {
           <div className="mt-4">
             {activeTab === "skills" && (
               <div>
-                <h3 className="text-[100%] font-semibold mb-2">Habilidades</h3>
+                <h3 className="text-[100%] font-semibold mb-2 font-poppins">
+                  Habilidades
+                </h3>
                 <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
                   <div className="flex items-center gap-2">
-                    <FaReact className="text-[100%] text-[#61DAFB]" />
-                    <span className="text-[100%] text-[#000080]">React</span>
+                    <FaReact className="text-[100%] text-[#61DAFB]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      React
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <FaHtml5 className="text-[100%] text-[#E34F26]" />
-                    <span className="text-[100%] text-[#000080]">HTML</span>
+                    <FaHtml5 className="text-[100%] text-[#E34F26]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      HTML
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <SiTypescript className="text-[100%] text-[#3178C6]" />
-                    <span className="text-[100%] text-[#000080]">
+                    <SiTypescript className="text-[100%] text-[#3178C6]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
                       TypeScript
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <DiJavascript className="text-[100%] text-[#F7DF1E]" />
-                    <span className="text-[100%] text-[#000080]">
+                    <DiJavascript className="text-[100%] text-[#F7DF1E]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
                       JavaScript
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <FaCss3Alt className="text-[100%] text-[#1572B6]" />
-                    <span className="text-[100%] text-[#000080]">CSS</span>
+                    <FaCss3Alt className="text-[100%] text-[#1572B6]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      CSS
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <SiTailwindcss className="text-[100%] text-[#06B6D4]" />
-                    <span className="text-[100%] text-[#000080]">
+                    <SiTailwindcss className="text-[100%] text-[#06B6D4]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
                       Tailwind CSS
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <SiFirebase className="text-[100%] text-[#FFCA28]" />
-                    <span className="text-[100%] text-[#000080]">Firebase</span>
+                    <SiFirebase className="text-[100%] text-[#FFCA28]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      Firebase
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <SiOpenai className="text-[100%] text-[#412991]" />
-                    <span className="text-[100%] text-[#000080]">OpenIA</span>
+                    <SiOpenai className="text-[100%] text-[#412991]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      OpenIA
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <FaMobileAlt className="text-[100%] text-gray-600" />
-                    <span className="text-[100%] text-[#000080]">
+                    <FaMobileAlt className="text-[100%] text-gray-600  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
                       Responsive Design
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <SiAstro className="text-[100%] text-[#FF5D01]" />
-                    <span className="text-[100%] text-[#000080]">Astro JS</span>
+                    <SiAstro className="text-[100%] text-[#FF5D01]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      Astro JS
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <FaSearchengin className="text-[100%] text-[#47C2FF]" />
-                    <span className="text-[100%] text-[#000080]">SEO</span>
+                    <FaSearchengin className="text-[100%] text-[#47C2FF]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      SEO
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <FaWordpress className="text-[100%] text-[#21759B]" />
-                    <span className="text-[100%] text-[#000080]">
+                    <FaWordpress className="text-[100%] text-[#21759B]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
                       WordPress
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <FaShoppingCart className="text-[100%] text-[#96588A]" />
-                    <span className="text-[100%] text-[#000080]">
+                    <FaShoppingCart className="text-[100%] text-[#96588A]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
                       WooCommerce
                     </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <SiCpanel className="text-[100%] text-[#FF6C2C]" />
-                    <span className="text-[100%] text-[#000080]">cPanel</span>
+                    <SiCpanel className="text-[100%] text-[#FF6C2C]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      cPanel
+                    </span>
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <FaBootstrap className="text-[100%] text-[#7952B3]" />
-                    <span className="text-[100%] text-[#000080]">
+                    <FaBootstrap className="text-[100%] text-[#7952B3]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
                       Bootstrap
                     </span>
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <SiStrapi className="text-[100%] text-[#2F2E8B]" />
-                    <span className="text-[100%] text-[#000080]">Strapi</span>
+                    <SiStrapi className="text-[100%] text-[#2F2E8B]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      Strapi
+                    </span>
                   </div>
 
                   <div className="flex items-center gap-2">
-                    <FaServer className="text-[100%] text-gray-600" />
-                    <span className="text-[100%] text-[#000080]">API REST</span>
+                    <FaServer className="text-[100%] text-gray-600  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      API REST
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <SiPostman className="text-[100%] text-[#FF6C37]" />
-                    <span className="text-[100%] text-[#000080]">Postman</span>
+                    <SiPostman className="text-[100%] text-[#FF6C37]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      Postman
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <SiJira className="text-[100%] text-[#0052CC]" />
-                    <span className="text-[100%] text-[#000080]">JIRA</span>
+                    <SiJira className="text-[100%] text-[#0052CC]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      JIRA
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <SiNotion className="text-[100%] text-black" />
-                    <span className="text-[100%] text-[#000080]">Notion</span>
+                    <SiNotion className="text-[100%] text-black  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      Notion
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <FaTrello className="text-[100%] text-[#0079BF]" />
-                    <span className="text-[100%] text-[#000080]">Trello</span>
+                    <FaTrello className="text-[100%] text-[#0079BF]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      Trello
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <FaUsers className="text-[100%] text-[#1F73B7]" />
-                    <span className="text-[100%] text-[#000080]">SCRUM</span>
+                    <FaUsers className="text-[100%] text-[#1F73B7]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      SCRUM
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <FaFigma className="text-[100%] text-[#F24E1E]" />
-                    <span className="text-[100%] text-[#000080]">Figma</span>
+                    <FaFigma className="text-[100%] text-[#F24E1E]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      Figma
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <SiMysql className="text-[100%] text-[#4479A1]" />
-                    <span className="text-[100%] text-[#000080]">SQL</span>
+                    <SiMysql className="text-[100%] text-[#4479A1]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      SQL
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <SiOracle className="text-[100%] text-[#F80000]" />
-                    <span className="text-[100%] text-[#000080]">Oracle</span>
+                    <SiOracle className="text-[100%] text-[#F80000]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      Oracle
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <SiMongodb className="text-[100%] text-[#47A248]" />
-                    <span className="text-[100%] text-[#000080]">MongoDB</span>
+                    <SiMongodb className="text-[100%] text-[#47A248]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      MongoDB
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <FaNodeJs className="text-[100%] text-[#339933]" />
-                    <span className="text-[100%] text-[#000080]">Node.js</span>
+                    <FaNodeJs className="text-[100%] text-[#339933]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      Node.js
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <FaGitAlt className="text-[100%] text-[#F05032]" />
-                    <span className="text-[100%] text-[#000080]">Git</span>
+                    <FaGitAlt className="text-[100%] text-[#F05032]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      Git
+                    </span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <FaDocker className="text-[100%] text-[#2496ED]" />
-                    <span className="text-[100%] text-[#000080]">CI/CD</span>
+                    <FaDocker className="text-[100%] text-[#2496ED]  animate-spin-slow" />
+                    <span className="text-[100%] text-[#000080] font-poppins">
+                      CI/CD
+                    </span>
                   </div>
                 </div>
               </div>
@@ -241,30 +292,36 @@ const Area = () => {
 
             {activeTab === "education" && (
               <div>
-                <h3 className="text-[100%] font-semibold mb-2">Educación</h3>
+                <h3 className="text-[100%] font-semibold mb-2 font-poppins">
+                  Educación
+                </h3>
                 <div className="space-y-4">
                   <div className="border-l-4 border-[#9aca3c] pl-4">
-                    <h4 className="font-semibold text-[100%] text-[#000080]">
+                    <h4 className="font-semibold text-[100%] text-[#000080] font-poppins">
                       Universidad Tecnológica de Pereira
                     </h4>
-                    <p className="text-[100%] text-gray-600">
+                    <p className="text-[100%] text-gray-600 font-poppins">
                       Ingeniería de Sistemas y Computación
                     </p>
-                    <p className="text-[100%] text-gray-500">2007 - 2012</p>
+                    <p className="text-[100%] text-gray-500 font-poppins">
+                      2007 - 2012
+                    </p>
                   </div>
 
                   <div className="border-l-4 border-[#9aca3c] pl-4">
-                    <h4 className="font-semibold text-[100%] text-[#000080]">
+                    <h4 className="font-semibold text-[100%] text-[#000080] font-poppins">
                       Certificación en Metodologías Ágiles
                     </h4>
-                    <p className="text-[100%] text-gray-600">En proceso</p>
+                    <p className="text-[100%] text-gray-600 font-poppins">
+                      En proceso
+                    </p>
                   </div>
 
                   <div className="mt-6">
-                    <h4 className="font-semibold text-[100%] text-[#000080] mb-3">
+                    <h4 className="font-semibold text-[100%] text-[#000080] mb-3 font-poppins">
                       Cursos y Certificaciones
                     </h4>
-                    <ul className="space-y-2 text-[100%] text-gray-600">
+                    <ul className="space-y-2 text-[100%] text-gray-600 font-poppins">
                       <li>• Curso de React Avanzado</li>
                       <li>
                         • Curso de Clean Code y Buenas Prácticas con JavaScript

@@ -39,12 +39,14 @@ const Navbar = () => {
           md:relative absolute top-0 right-0
           md:flex-row flex-col
           md:bg-transparent
-          md:p-0 p-8 pt-20
+          md:p-0 p-8 pt-5
           md:w-auto w-64
           md:h-auto
           z-10
           rounded-l-2xl
           bg-purple-300
+          bg-opacity-90
+        
         
         `}
         >
@@ -55,7 +57,7 @@ const Navbar = () => {
             }}
             className="hover:text-[#5e17eb] cursor-pointer transition-colors duration-300 "
           >
-            <span className="text-[100%]">Home</span>
+            <span className="text-[100%] underline">Home</span>
           </li>
           <li
             onClick={() => {
@@ -64,7 +66,7 @@ const Navbar = () => {
             }}
             className="hover:text-[#5e17eb] cursor-pointer transition-colors duration-300 "
           >
-            <span className="text-[100%]">Acerca</span>
+            <span className="text-[100%] underline">Acerca</span>
           </li>
           <li
             onClick={() => {
@@ -73,7 +75,7 @@ const Navbar = () => {
             }}
             className="hover:text-[#5e17eb] cursor-pointer transition-colors duration-300 "
           >
-            <span className="text-[100%]">Experiencia</span>
+            <span className="text-[100%] underline">Experiencia</span>
           </li>
           <li
             onClick={() => {
@@ -82,7 +84,7 @@ const Navbar = () => {
             }}
             className="hover:text-[#5e17eb] cursor-pointer transition-colors duration-300 "
           >
-            <span className="text-[100%]">Proyectos</span>
+            <span className="text-[100%] underline">Proyectos</span>
           </li>
         </ul>
       </nav>

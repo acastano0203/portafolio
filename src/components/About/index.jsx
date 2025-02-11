@@ -1,7 +1,13 @@
 import miCV from "../../assets/mi-cv.pdf";
 import { FaFilePdf, FaUser } from "react-icons/fa";
+import experience from "../../assets/expirience.png";
+import useTypewriter from "../../hooks/useTypewriter";
 
 const About = () => {
+  const text =
+    "Mi enfoque está en garantizar la calidad del software mediante la implementación de buenas prácticas, procesos eficientes y tecnologías modernas, mientras mantengo una actitud abierta al aprendizaje continuo y la adaptación a los cambios del entorno tecnológico.";
+  const displayText = useTypewriter(text, 30);
+
   const handleDownload = () => {
     const link = document.createElement("a");
     link.href = miCV;
@@ -17,7 +23,7 @@ const About = () => {
         {/* Columna de imagen */}
         <div className="flex items-center justify-center md:justify-end md:mr-24">
           <img
-            src="/src/assets/expirience.png"
+            src={experience}
             alt="Perfil"
             className="w-72 object-cover rounded-lg shadow-lg"
           />
@@ -25,30 +31,27 @@ const About = () => {
 
         {/* Columna de contenido */}
         <div className="flex flex-col justify-center space-y-6">
-          <h1 className="text-5xl font-bold text-white flex flex-col md:flex-row items-center gap-4">
+          <h1 className="text-5xl font-bold text-white flex flex-col md:flex-row items-center gap-4 font-poppins">
             <FaUser className="text-4xl" />
-            Acerca de <span className="text-white text-[100%]">______</span>
+            Acerca de{" "}
+            <span className="text-white text-[100%] font-poppins">______</span>
           </h1>
 
           <span
             className="text-lg w-auto lg:w-96 text-white leading-relaxed tracking-wide animate-fade-in
             hover:transform hover:scale-102 transition-all duration-300 ease-in-out p-4 font-poppins text-justify text-[100%]"
           >
-            Mi enfoque está en garantizar la calidad del software mediante la
-            implementación de buenas prácticas, procesos eficientes y
-            tecnologías modernas, mientras mantengo una actitud abierta al
-            aprendizaje continuo y la adaptación a los cambios del entorno
-            tecnológico.
+            {displayText}
           </span>
 
           <button
             onClick={handleDownload}
             className="bg-[#9aca3c] text-black w-auto md:w-48 py-3 rounded-full hover:bg-opacity-90 
-            transition-all flex items-center justify-center gap-2"
+            transition-all flex items-center justify-center gap-2 font-poppins"
           >
             <FaFilePdf className="text-[100%]" />
 
-            <span className="text-[100%]">Descargar CV</span>
+            <span className="text-[100%] font-poppins">Descargar CV</span>
           </button>
         </div>
       </div>
