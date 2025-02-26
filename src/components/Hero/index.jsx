@@ -8,8 +8,8 @@ const Hero = () => {
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 grid-rows-[auto_auto] gap-8 w-full min-h-[300px] md:min-h-[400px] lg:min-h-[700px] px-4 mt-10 ">
       {/* Primera fila: Texto e imagen */}
-      <div className="flex flex-col justify-center items-end md:items-end lg:items-end md:mr-8 mt-10">
-        <h1 className="text-[100%] md:text-[150%] lg:text-[300%] font-bold font-poppins text-[#000080] text-center">
+      <div className="flex flex-col justify-center items-center md:items-center w-full">
+        <h1 className="text-[100%] md:text-[150%] lg:text-[300%] font-bold font-poppins text-[#000080] text-center max-w-3xl mx-auto">
           <div className="flex items-center justify-center gap-2 font-poppins">
             ¡Hola!{" "}
             <FaCode className="text-[100%] md:text-[150%] lg:text-[250%] text-[rgba(73,19,180,0.8)]" />
